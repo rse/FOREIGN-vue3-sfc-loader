@@ -70,7 +70,7 @@ const configure = ({name, vueTarget, libraryTargetModule}) => (env = {}, { mode 
 	// doc: https://github.com/browserslist/browserslist#full-list
 	// eg. '> 0.5%, last 2 versions, Firefox ESR, not dead, not ie 11'
 	const {
-		targetsBrowsers = 'defaults',
+		targetsBrowsers = 'since 2020',
 	} = env;
 
 	const {
@@ -443,10 +443,10 @@ ${ pkg.name } v${ pkg.version } for vue${ vueTarget }
 }
 
 let configs = [
-	{name: 'vue2', vueTarget: '2', libraryTargetModule: false },
-	{name: 'vue2esm', vueTarget: '2', libraryTargetModule: true },
+	/* {name: 'vue2', vueTarget: '2', libraryTargetModule: false }, */
+	/* {name: 'vue2esm', vueTarget: '2', libraryTargetModule: true }, */
 	{name: 'vue3', vueTarget: '3', libraryTargetModule: false },
-	{name: 'vue3esm', vueTarget: '3', libraryTargetModule: true },
+	/* {name: 'vue3esm', vueTarget: '3', libraryTargetModule: true }, */
 ]
 
 module.exports = configs.map(configure)
